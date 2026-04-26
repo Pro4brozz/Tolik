@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tolik Projekt</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            color: #ffffff;
+            background-color: #1b0428;
+            font-family: "Roboto", sans-serif;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+        .banner {
+            padding: 80px 0;
+        }
+
+        .title {
+            font-size: 40px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .subtitle {
+            color: #ffb5a9;
+            margin-bottom: 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #fc4a22;
+            color: #fff;
+            padding: 14px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            margin-top: 20px;
+            cursor: pointer;
+            border: none;
+            font-size: 14px;
+        }
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .card {
+            background: #321d3e;
+            padding: 30px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+        }
+
+        .doc {
+            background: #321d3e;
+            padding: 30px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+        }
+
+        .doc img {
+            width: 100%;
+            max-width: 600px;
+            height: 330px;
+            object-fit: cover;
+            display: block;
+            margin: 10px auto 25px;
+            border-radius: 12px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 30px;
+            opacity: 0.6;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header container">
+        <div class="logo">Tolik Project</div>
+
+        <button class="btn" onclick="toggleLang()" id="langBtn">EN</button>
+    </header>
+
+    <main>
+
+        <section class="banner container">
+            <div class="subtitle" id="subtitle">Projekt über Namen</div>
+            <h1 class="title" id="title">Was ist<br>Tolik?</h1>
+            <p id="intro">
+                In der Welt gibt es viele Namen. Jeder Name hat seine eigene Geschichte.
+                In diesem Projekt sprechen wir über einen besonderen Namen – Tolik.
+            </p>
+
+            <a href="#info" class="btn" id="moreBtn">Mehr erfahren</a>
+        </section>
+
+        <section id="info" class="section container">
+
+            <div class="card">
+                <h2 id="h1">Was bedeutet Tolik?</h2>
+                <p id="p1">
+                    Tolik (aus dem Russischen „Толик“) ist eine kurze und freundliche Form von dem Namen Anatoli.
+                    Man benutzt solche Namen oft in der Familie oder mit Freunden.
+                </p>
+            </div>
+
+            <div class="card">
+                <h2 id="h2">Herkunft</h2>
+                <p id="p2">
+                    Der Name Anatoli kommt aus dem Griechischen und bedeutet „Sonnenaufgang“ oder „Osten“.
+                    Später wurde daraus die Form „Tolik“.
+                </p>
+            </div>
+
+            <div class="card">
+                <h2 id="h3">Warum ist er populär?</h2>
+                <p id="p3">
+                    Der Name ist besonders in russischsprachigen Ländern sehr bekannt.
+                    Man benutzt ihn nicht nur als Namen, sondern auch manchmal als Witz.
+                </p>
+            </div>
+
+            <div class="card">
+                <h2 id="h4">Unser Held</h2>
+                <p id="p4">
+                    Unser Held David hat diesen zweiten Namen nicht ohne Grund bekommen, sondern
+                    wegen seines scharfen Verstandes, seines kritischen Denkens, seines kreativen Humors,
+                    seiner Arbeitsbereitschaft, seiner Ehrlichkeit und vor allem seiner Freundlichkeit.
+                </p>
+            </div>
+
+            <div class="doc">
+                <h2 id="h5">Nachweisen</h2>
+                <p id="p5">Ich habe 3 KIs gefragt, was „Tolik“ bedeutet.</p>
+
+                <b>GhatGPT:</b>
+                <img src="img/gpt.png">
+
+                <b>Gemini:</b>
+                <img src="img/gem.png">
+
+                <b>Grok:</b>
+                <img src="img/grok.png">
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="footer" id="footer">
+        © The copyright of the great and unique Tolik is protected
+    </footer>
+
+    <script>
+        let isGerman = true;
+
+        function toggleLang() {
+            isGerman = !isGerman;
+
+            document.getElementById("langBtn").innerText = isGerman ? "EN" : "DE";
+
+            const text = {
+                de: {
+                    subtitle: "Projekt über Namen",
+                    title: "Was ist<br>Tolik?",
+                    intro: "In der Welt gibt es viele Namen. Jeder Name hat seine eigene Geschichte. In diesem Projekt sprechen wir über einen besonderen Namen – Tolik.",
+                    moreBtn: "Mehr erfahren",
+                    h1: "Was bedeutet Tolik?",
+                    p1: "Tolik (aus dem Russischen „Толик“) ist eine kurze und freundliche Form von dem Namen Anatoli. Man benutzt solche Namen oft in der Familie oder mit Freunden.",
+                    h2: "Herkunft",
+                    p2: "Der Name Anatoli kommt aus dem Griechischen und bedeutet „Sonnenaufgang“ oder „Osten“. Später wurde daraus die Form „Tolik“.",
+                    h3: "Warum ist er populär?",
+                    p3: "Der Name ist besonders in russischsprachigen Ländern sehr bekannt. Man benutzt ihn nicht nur als Namen, sondern auch manchmal als Witz.",
+                    h4: "Unser Held",
+                    p4: "Unser Held David hat diesen zweiten Namen nicht ohne Grund bekommen, sondern wegen seines scharfen Verstandes, seines kritischen Denkens, seines kreativen Humors, seiner Arbeitsbereitschaft, seiner Ehrlichkeit und vor allem seiner Freundlichkeit.",
+                    h5: "Nachweisen",
+                    p5: "Ich habe 3 KIs gefragt, was „Tolik“ bedeutet.",
+                    footer: "© The copyright of the great and unique Tolik is protected"
+                },
+                en: {
+                    subtitle: "Project about names",
+                    title: "What is<br>Tolik?",
+                    intro: "In the world there are many names. Every name has its own story. In this project we talk about a special name – Tolik.",
+                    moreBtn: "Learn more",
+                    h1: "What does Tolik mean?",
+                    p1: "Tolik (from Russian “Толик”) is a short and friendly form of the name Anatoly. Such names are often used in family or among friends.",
+                    h2: "Origin",
+                    p2: "The name Anatoly comes from Greek and means “sunrise” or “east”. Later it became the form “Tolik”.",
+                    h3: "Why is it popular?",
+                    p3: "The name is especially well known in Russian-speaking countries. It is used not only as a name but sometimes also as a joke.",
+                    h4: "Our hero",
+                    p4: "Our hero David got this second name for a reason, because of his sharp mind, critical thinking, creative humor, hard work, honesty and above all kindness.",
+                    h5: "Sources",
+                    p5: "I asked 3 AIs what “Tolik” means.",
+                    footer: "© The copyright of the great and unique Tolik is protected"
+                }
+            };
+
+            const lang = isGerman ? text.de : text.en;
+
+            document.getElementById("subtitle").innerHTML = lang.subtitle;
+            document.getElementById("title").innerHTML = lang.title;
+            document.getElementById("intro").innerText = lang.intro;
+            document.getElementById("moreBtn").innerText = lang.moreBtn;
+
+            document.getElementById("h1").innerText = lang.h1;
+            document.getElementById("p1").innerText = lang.p1;
+
+            document.getElementById("h2").innerText = lang.h2;
+            document.getElementById("p2").innerText = lang.p2;
+
+            document.getElementById("h3").innerText = lang.h3;
+            document.getElementById("p3").innerText = lang.p3;
+
+            document.getElementById("h4").innerText = lang.h4;
+            document.getElementById("p4").innerText = lang.p4;
+
+            document.getElementById("h5").innerText = lang.h5;
+            document.getElementById("p5").innerText = lang.p5;
+
+            document.getElementById("footer").innerText = lang.footer;
+        }
+    </script>
+
+</body>
+
+</html>
